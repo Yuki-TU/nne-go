@@ -1,0 +1,22 @@
+---
+name: feature
+about: 機能追加の場合はこちらを使用する
+---
+
+<!-- 要望のテンプレート -->
+
+# 概要
+
+# 目的
+
+# 提案内容
+
+# タスク
+
+- [ ] 細かいタスクに分解できているなら書き出す
+      Footer
+      © 2022 GitHub, Inc.
+      Footer navigation
+      Terms
+      Privacy
+      Security
