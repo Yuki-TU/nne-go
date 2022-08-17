@@ -1,0 +1,71 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+# クライアントIF部分
+
+"""
+ToDoタスク
+"""
+type Todo {
+  """
+  タスクid
+  """
+  id: ID!
+  """
+  タスクテキスト
+  """
+  text: String!
+  """
+  タスクフラグ
+  """
+  done: Boolean!
+  """
+  ユーザ情報
+  """
+  user: User!
+}
+
+"""
+ユーザ情報
+"""
+type User {
+  """
+  ユーザid
+  """
+  id: ID!
+  """
+  名前
+  """
+  name: String!
+}
+
+# ゲット部分
+type Query {
+  """
+  todoタスク
+  """
+  todos: [Todo!]!
+}
+
+"""
+input要素
+"""
+input NewTodo {
+  """
+  タスクの説明
+  """
+  text: String!
+  """
+  ユーザid
+  """
+  userId: String!
+}
+
+# ポスト部分
+type Mutation {
+  """
+  タスク作成
+  """
+  createTodo(input: NewTodo!): Todo!
+}
